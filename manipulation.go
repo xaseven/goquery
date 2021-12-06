@@ -325,8 +325,11 @@ func (s *Selection) SetHtml(htmlStr string) *Selection {
 func (s *Selection) SetText(text string) *Selection {
 	return s.SetHtml(html.EscapeString(text))
 }
-//by seven:
+//by seven
 func  (s *Selection) SetTextNoHtml(text string) *Selection {
+	return s.SetHtml(text)
+}
+func  (s *Selection) SetTextEx(text string) *Selection {
 	return s.SetHtml(text)
 }
 // Unwrap removes the parents of the set of matched elements, leaving the matched
